@@ -21,3 +21,15 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+
+
+    list1 = list(phrase.lower())
+    if ' ' in list1:
+        list1.remove(' ')
+    list2 = list1[0:len(list1)]
+    list2.reverse()
+    if list1 == list2:
+        return True
+    else:
+        return False
+
